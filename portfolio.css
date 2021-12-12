@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genvej til hurtigere løsninger */
+:root{
+    --background: #2C2C2C;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p{
+    font-size: 12px;
+    padding: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+/* Redigering af de to hoved titler da de skal positioneres anderledes */
+.navn{
+    float: left;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.titel{
+    float: right;
+    margin-top: 23rem;
+}
+
+/* navigation bar */
+/* vi bruger følgende variabler til at gøre billedet bedst optimalt som muligt */
+header{
+    height: 700px;
+    padding: 10px 5px;
+    background-image: url(IMG/portrat5\ kopier.jpg);
+    background-size: cover;
+}
+
+/* Fas fa-bar svg'ets (burgermenu ikonet) indstillinger */
+.fas{
+    color: rgb(196, 178, 158);
+    font-size: 3.5rem;
+    line-height: 45px;
+    float: right;
+    padding: 0.4rem;
+}
+
+nav{
+    position: absolute;
+    background-color: var(--background);
+    top: 69px;
+    left: 0;
+    width: 100%;
+
+}
+
+/* UL indstillinger, bl.a. gør at vi har en transition på vores menu */
+nav ul{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+
+}
+
+/* List dekoration */
+nav ul li{
+    text-align: center;
+}
+
+/* Når burgermenu'en kommer ned er det her hele a-tags dekoration */
+nav ul li a{
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Når musen hovererer over disse a-tags er det de her indstillinger som har stylet det */
+nav ul li a:hover{
+    background-color: blueviolet;
+    width: 100%;
+}
+
+/* Checkbox, som er burgermenu'ens indstillinger der gør at vores menu kommer ned når man klikker */
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ nav ul{
+    max-height: 100%;
+    transition: all 0.5s;
+}
+
+/* Navbar slutter */
+
+/* Section 1: mine egenskaber (My Qualities) */
+/* Min flexbox */
+.quality{
+    padding: 20px;
+}
+
+.quality h2{
+    border-bottom: 2px solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding-top: 20px;
+
+}
+
+/* Vi går ind og redigerer images direkte så vi kan sætte dem i venstre side af p og h3 */
+.container img{
+    float: left;
+    margin-right: 4vh;
+}
+
+h2{
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    padding: 3px;
+}
+
+/* Section 2: Mine kompetencer (my skills) */
+.skills{
+    background-image: url(IMG/david-jorre-oQbLeq4nOek-unsplash.jpg);
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
+.skills p{
+    text-align: center;
+    padding: 1em;
+}
+
+/* Vi begynder grids systemet */
+.grids{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* Vores h2 */
+.myskill-title{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border-bottom: 2px solid white;
+}
+
+/* Titel og paragraph om Adobe Programmer */
+.adobe{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding: 1em;
+}
+
+/* Title og paragraph om VSC */
+.vsc{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding: 1em;
+
+}
+
+/* De 4 ikoner som jeg nævner i min tekst */
+.skill-icons{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: center;
+
+}
+
+/* Her laves der noget mellemrum mellem de individuelle ikoner*/
+.skill-icons img{
+    margin: 20px;
+}
+
+/* section 3: my creations */
+.creations{
+    padding: 20px;
+}
+.creations h2{
+    padding-bottom: 10px;
+}
+
+.minibrodtekst{
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+}
+
+.categories{
+    margin: 2rem;
+    padding: 5em;
+}
+
+.categories img{
+    border: 2px solid black;
+}
+
+footer{
+    background-color: var(--background);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Web indstillingerne begynder */
+@media screen and (min-width: 600px){
+    header{
+        height: 700px;
+        padding: 10px 5px;
+        background-image: url(IMG/portrat5\ kopier.jpg);
+        background-size: cover;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .titel{
+        float: right;
+        margin-top: 33rem;
+    }
+    
+    .fas{
+        display: none;
+    }
+
+    nav{
+        position: relative;
+        top: -10px;
+    }
+
+    nav ul{
+        text-align: right;
+        max-height: 50px;
+    }
+
+    nav ul li{
+        display: inline-flex;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+    /* Første sektion */
+    .container {
+        display: flexbox;
+        flex-direction: row;
+    }
+
+    .container img{
+
+    }
+    
+    h2{
+        font-size: 50px;
+        padding: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    h3{
+        font-size: 30px;
+        padding: 3px;
+    }
+
+    .skill-icons{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2 span;
+    
+    }
+}
