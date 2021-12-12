@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genvej til hurtigere løsninger */
+:root{
+    --background: #2C2C2C;
+}
+/* navigation bar */
+/* vi bruger følgende variabler til at gøre billedet bedst optimalt som muligt */
+header{
+    height: 270px;
+    padding: 10px 5px;
+    background-image: url(IMG/roth-melinda-WaHDomAai6A-unsplash.jpg);
+    background-size: 100%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+}
+
+/* Fas fa-bar svg'ets (burgermenu ikonet) indstillinger */
+.fas{
+    color: white;
+    font-size: 3.5rem;
+    line-height: 45px;
+    float: right;
+    padding: 0.4rem;
+}
+
+nav{
+    position: absolute;
+    background-color: transparent;
+    top: 69px;
+    left: 0;
+    width: 100%;
+
+}
+
+/* UL indstillinger, bl.a. gør at vi har en transition på vores menu */
+nav ul{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+
+}
+
+/* List dekoration */
+nav ul li{
+    text-align: center;
+}
+
+/* Når burgermenu'en kommer ned er det her hele a-tags dekoration */
+nav ul li a{
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Når musen hovererer over disse a-tags er det de her indstillinger som har stylet det */
+nav ul li a:hover{
+    background-color: black;
+    width: 100%;
+}
+
+/* Checkbox, som er burgermenu'ens indstillinger der gør at vores menu kommer ned når man klikker */
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ nav ul{
+    max-height: 100%;
+    transition: all 0.5s;
+}
+
+/* Navbar slutter */
+
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding-top: 20px;
+}
+
+.box img{
+    border: 2px solid black;
+    margin: 5rem;
+}
+
+footer{
+    background-color: var(--background);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Web indstillingerne begynder */
+@media screen and (min-width: 600px){
+    header{
+        height: 400px;
+        padding: 9px 0px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .titel{
+        float: right;
+        margin-top: 33rem;
+    }
+    
+    .fas{
+        display: none;
+    }
+
+    nav{
+        position: relative;
+        top: -10px;
+    }
+
+    nav ul{
+        text-align: right;
+        max-height: 50px;
+    }
+
+    nav ul li{
+        display: inline-flex;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .box{
+        display: flexbox;
+        flex-direction: row;
+    }
+}
