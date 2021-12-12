@@ -201,9 +201,9 @@ h3{
 }
 
 .creations img{
-    height: 120px;
-    width: 120px;
-
+    height: 170px;
+    width: 180px;
+    margin: 20px;
 }
 
 .minibrodtekst{
@@ -213,8 +213,7 @@ h3{
 }
 
 .categories{
-    margin: 2rem;
-    padding: 1em;
+    text-align: center;
 }
 
 .categories img{
@@ -284,9 +283,6 @@ footer{
         flex-direction: row;
     }
 
-    .container img{
-
-    }
     
     h2{
         font-size: 50px;
@@ -308,14 +304,13 @@ footer{
     
     }
 
-    .categories img{
-        grid-column-start: 1;
-        grid-column-end: 2;
+    .categories{
+        margin: 2rem;
+        padding: 1em;
     }
 
     .creations img{
         height: 400px;
         width: 400px;
-    
     }
 }

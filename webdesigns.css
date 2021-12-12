@@ -35,7 +35,7 @@ h1{
 
 nav{
     position: absolute;
-    background-color: transparent;
+    background-color: var(--background);
     top: 69px;
     left: 0;
     width: 100%;
@@ -66,7 +66,7 @@ nav ul li a{
 
 /* Når musen hovererer over disse a-tags er det de her indstillinger som har stylet det */
 nav ul li a:hover{
-    background-color: black;
+    background-color: grey;
     width: 100%;
 }
 
@@ -125,6 +125,7 @@ footer{
     nav{
         position: relative;
         top: -10px;
+        background-color: transparent;
     }
 
     nav ul{
@@ -140,6 +141,11 @@ footer{
         text-decoration: none;
         color: white;
         text-transform: uppercase;
+    }
+
+    nav ul li a:hover{
+        background-color: black;
+        width: 100%;
     }
 
     .box{
