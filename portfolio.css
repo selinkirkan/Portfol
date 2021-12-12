@@ -84,7 +84,7 @@ nav ul li a{
 
 /* Når musen hovererer over disse a-tags er det de her indstillinger som har stylet det */
 nav ul li a:hover{
-    background-color: blueviolet;
+    background-color: grey;
     width: 100%;
 }
 
@@ -200,6 +200,12 @@ h3{
     padding-bottom: 10px;
 }
 
+.creations img{
+    height: 120px;
+    width: 120px;
+
+}
+
 .minibrodtekst{
     text-align: center;
     padding-bottom: 30px;
@@ -208,11 +214,13 @@ h3{
 
 .categories{
     margin: 2rem;
-    padding: 5em;
+    padding: 1em;
 }
 
 .categories img{
     border: 2px solid black;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 footer{
@@ -247,6 +255,7 @@ footer{
     nav{
         position: relative;
         top: -10px;
+        background-color: transparent;
     }
 
     nav ul{
@@ -263,6 +272,12 @@ footer{
         color: white;
         text-transform: uppercase;
     }
+
+    nav ul li a:hover{
+        background-color: black;
+        width: 100%;
+    }
+
     /* Første sektion */
     .container {
         display: flexbox;
@@ -290,6 +305,17 @@ footer{
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 2 span;
+    
+    }
+
+    .categories img{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .creations img{
+        height: 400px;
+        width: 400px;
     
     }
 }
