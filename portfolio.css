@@ -17,8 +17,8 @@ h1{
 }
 
 p{
-    font-size: 12px;
-    padding: 0.5rem;
+    font-size: 17px;
+    padding: 1rem;
     letter-spacing: 0.5px;
 }
 
@@ -181,10 +181,7 @@ h3{
 
 /* De 4 ikoner som jeg nævner i min tekst */
 .skill-icons{
-    grid-column-start: 1;
-    grid-column-end: 1;
     text-align: center;
-
 }
 
 /* Her laves der noget mellemrum mellem de individuelle ikoner*/
@@ -214,6 +211,7 @@ h3{
 
 .categories{
     text-align: center;
+    display: flex;
 }
 
 .categories img{
@@ -221,6 +219,26 @@ h3{
     grid-row-start: 1;
     grid-row-end: 2;
 }
+
+.web-btn p{
+    z-index: -1;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.web-btn a{
+    text-decoration: none;
+}
+
+.logo-btn p{
+    margin: -130px;
+}
+
+.logo-btn a{
+    text-decoration: none;
+}
+
 
 footer{
     background-color: var(--background);
@@ -238,7 +256,7 @@ footer{
     }
 
     p{
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .titel{
@@ -278,8 +296,38 @@ footer{
 
     /* Første sektion */
     .container {
-        display: flexbox;
+        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    .container div {
+        max-width: 30rem;
+        padding: 20px;
+        margin: 5px;
+    }
+
+    .design {
+  
+    }
+
+    .innovation {
+
+    }
+
+    .strukture {
+
+    }
+
+    .quick {
+        align-self: flex-end;
+    }
+
+    .individuality {
+        align-self: flex-end;
     }
 
     
@@ -296,8 +344,13 @@ footer{
     }
 
     .skill-icons{
-        grid-column-start: 4;
-        grid-column-end: 4 span;  
+        display: grid;
+        margin: -10vh;
+        padding: 5rem;
+    }
+
+    .skill-icons img{
+        margin: 10px;
     }
 
     .categories{
