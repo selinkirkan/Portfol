@@ -152,13 +152,13 @@ h3{
 /* Vi begynder grids systemet */
 .grids{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1;
 }
 
 /* Vores h2 */
 .myskill-title{
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
     border-bottom: 2px solid white;
@@ -182,6 +182,8 @@ h3{
 /* De 4 ikoner som jeg nævner i min tekst */
 .skill-icons{
     text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 /* Her laves der noget mellemrum mellem de individuelle ikoner*/
@@ -211,34 +213,43 @@ h3{
 
 .categories{
     text-align: center;
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
 }
 
-.categories img{
-    border: 2px solid black;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.web-btn p{
-    z-index: -1;
-    border: 2px solid black;
-    margin: 0;
-    padding: 0;
-}
-
-.web-btn a{
+.categories a{
     text-decoration: none;
+    border: 2px solid black;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: var(--background);
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
 }
 
-.logo-btn p{
-    margin: -130px;
+.web-btn img{
+    position: relative;
+
+}
+/*.web-btn a{
+    text-decoration: none;
+    border: 2px solid black;
 }
 
 .logo-btn a{
     text-decoration: none;
+    border: 2px solid black;
 }
 
+.galleri-btn{
+    text-decoration: none;
+    border: 2px solid black;
+}*/
 
 footer{
     background-color: var(--background);
@@ -343,9 +354,20 @@ footer{
         padding: 3px;
     }
 
+    .grids{
+        grid-template-columns: auto 100px;
+    }
+
+    .skills{
+        padding: 2rem;
+    }
+
     .skill-icons{
-        display: grid;
-        margin: -10vh;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        margin: -5em;
         padding: 5rem;
     }
 
