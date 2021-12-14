@@ -7,6 +7,7 @@
 /* Genvej til hurtigere løsninger */
 :root{
     --background: #2C2C2C;
+    --goldfont: rgb(179, 124, 71);
 }
 /* navigation bar */
 /* vi bruger følgende variabler til at gøre billedet bedst optimalt som muligt */
@@ -18,7 +19,7 @@ header{
 }
 
 h1{
-    color: white;
+    color: var(--goldfont);
     text-align: center;
     margin-top: 100px;
     text-transform: uppercase;
